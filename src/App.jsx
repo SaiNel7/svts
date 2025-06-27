@@ -11,7 +11,7 @@ export default function App() {
           <Link to="/" className="text-xl font-semibold">SVTS RideShare</Link>
           <div className = "flex space-x-4">
             <Link to="/" className="hover:underline">Home</Link>
-            <Link to="/post" className="hover:underline">Post a Ride</Link>
+            <Link to="/post-ride" className="hover:underline">Post a Ride</Link>
             <Link to="/Profile" className="hover:underline">Profile</Link>
           </div>
         </nav>
@@ -19,7 +19,7 @@ export default function App() {
         <main className="p-4">
           <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/post" element={<PostRide />} />
+            <Route path="/post-ride" element={<PostRide />} />
           </Routes>
         </main>
       </div>
