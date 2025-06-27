@@ -23,7 +23,6 @@ export default function Home() {
         .select('*')
         .order('created_at', { ascending: false });
 
-      // Apply filters if they exist
       if (filterLocation) {
         query = query.ilike('from_location', `%${filterLocation}%`);
       }
