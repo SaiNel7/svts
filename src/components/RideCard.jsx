@@ -85,7 +85,7 @@ const RideCard = ({ ride }) => {
       
       <div className="mt-4 pt-4 border-t border-gray-200">
         <button className="w-full bg-blue-600 text-white py-2 px-4 rounded-md hover:bg-blue-700 transition-colors duration-200 text-sm font-medium">
-          Contact Driver
+          Request Ride
         </button>
       </div>
     </div>
