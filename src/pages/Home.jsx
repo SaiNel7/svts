@@ -8,10 +8,10 @@ export default function Home() {
         {/* Hero Section */}
         <div className="text-center mb-16">
           <h1 className="text-4xl font-bold text-gray-900 mb-4">
-            Welcome to SVTS RideShare
+            Welcome to Sri Vidya Temple Society RideShare Platform
           </h1>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Connect with fellow students for safe and convenient rides. Whether you're looking to share a ride or find one, we've got you covered.
+            Connect with fellow temple visitors for safe and convenient rides. Whether you're looking to share a ride or find one, we've got you covered.
           </p>
         </div>
 
