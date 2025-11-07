@@ -24,7 +24,7 @@ export default function ViewRequests() {
 
       // Apply filters if they exist
       if (filterLocation) {
-        query = query.ilike('to_location', `%${filterLocation}%`);
+        query = query.ilike('from_location', `%${filterLocation}%`);
       }
       if (filterDate) {
         query = query.eq('leave_date', filterDate);
@@ -80,9 +80,9 @@ export default function ViewRequests() {
     <div className="min-h-screen bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
         <div className="mb-6">
-          <h1 className="text-3xl font-bold text-gray-900">Ride Requests</h1>
+          <h1 className="text-3xl font-bold text-gray-900">Temple Ride Requests</h1>
           <p className="mt-2 text-gray-600">
-            View and respond to ride requests from passengers.
+            View and respond to ride requests from fellow temple visitors.
           </p>
         </div>
 
@@ -92,13 +92,13 @@ export default function ViewRequests() {
           <form onSubmit={handleFilterSubmit} className="flex flex-wrap gap-4 items-end">
             <div className="flex-1 min-w-48">
               <label className="block text-sm font-medium text-gray-700 mb-1">
-                Destination (Zip Code)
+                Starting Location (Zip Code)
               </label>
               <input
                 type="text"
                 value={filterLocation}
                 onChange={(e) => setFilterLocation(e.target.value)}
-                placeholder="Enter zip code"
+                placeholder="Enter starting zip code"
                 className="w-full p-2 border border-gray-300 rounded-md focus:ring-blue-500 focus:border-blue-500"
               />
             </div>
@@ -181,7 +181,17 @@ export default function ViewRequests() {
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
                     </svg>
                     <span className="text-sm text-gray-700">
-                      <strong>To:</strong> {request.to_location}
+                      <strong>From:</strong> {request.from_location}
+                    </span>
+                  </div>
+                  
+                  <div className="flex items-center">
+                    <svg className="w-4 h-4 text-gray-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                    </svg>
+                    <span className="text-sm text-gray-700">
+                      <strong>To:</strong> Sri Vidya Temple Society - Rush, NY
                     </span>
                   </div>
                   

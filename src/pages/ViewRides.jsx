@@ -71,9 +71,9 @@ export default function ViewRides() {
     <div className="min-h-screen bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
         <div className="mb-6">
-          <h1 className="text-3xl font-bold text-gray-900">Available Rides</h1>
+          <h1 className="text-3xl font-bold text-gray-900">Rides to Sri Vidya Temple</h1>
           <p className="mt-2 text-gray-600">
-            Browse through available rides posted by drivers in your area.
+            Browse available rides to Sri Vidya Temple Society in Rush, NY.
           </p>
         </div>
 
@@ -83,13 +83,13 @@ export default function ViewRides() {
           <form onSubmit={handleFilterSubmit} className="flex flex-wrap gap-4 items-end">
             <div className="flex-1 min-w-48">
               <label className="block text-sm font-medium text-gray-700 mb-1">
-                Location (Zip Code)
+                Starting Location (Zip Code)
               </label>
               <input
                 type="text"
                 value={filterLocation}
                 onChange={(e) => setFilterLocation(e.target.value)}
-                placeholder="Enter zip code"
+                placeholder="Enter starting zip code"
                 className="w-full p-2 border border-gray-300 rounded-md focus:ring-blue-500 focus:border-blue-500"
               />
             </div>

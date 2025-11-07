@@ -11,7 +11,10 @@ export default function Home() {
             Welcome to Sri Vidya Temple Society RideShare Platform
           </h1>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Connect with fellow temple visitors for safe and convenient rides. Whether you're looking to share a ride or find one, we've got you covered.
+            Connect with fellow temple visitors for carpooling to Sri Vidya Temple Society.
+          </p>
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Share rides, save money, and build community.
           </p>
         </div>
 
@@ -24,9 +27,9 @@ export default function Home() {
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
               </svg>
             </div>
-            <h3 className="text-lg font-semibold text-gray-900 mb-2">Find Available Rides</h3>
+            <h3 className="text-lg font-semibold text-gray-900 mb-2">Find Rides to Temple</h3>
             <p className="text-gray-600 mb-4">
-              Browse through available rides posted by drivers in your area.
+              Browse available rides to Sri Vidya Temple Society from your area.
             </p>
             <Link
               to="/view-rides"
@@ -45,7 +48,7 @@ export default function Home() {
             </div>
             <h3 className="text-lg font-semibold text-gray-900 mb-2">Request a Ride</h3>
             <p className="text-gray-600 mb-4">
-              Let drivers know you're looking for a ride to your destination.
+              Let drivers know you need a ride to the temple from your location.
             </p>
             <Link
               to="/request-ride"
@@ -64,7 +67,7 @@ export default function Home() {
             </div>
             <h3 className="text-lg font-semibold text-gray-900 mb-2">View Ride Requests</h3>
             <p className="text-gray-600 mb-4">
-              See ride requests from passengers and offer to help them out.
+              See ride requests from fellow temple visitors and offer rides.
             </p>
             <Link
               to="/view-requests"
@@ -75,68 +78,6 @@ export default function Home() {
           </div>
         </div>
 
-        {/* Additional Info */}
-        <div className="bg-white rounded-lg shadow-sm p-8">
-          <h2 className="text-2xl font-bold text-gray-900 mb-6 text-center">How It Works</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div>
-              <h3 className="text-lg font-semibold text-gray-900 mb-3">For Passengers</h3>
-              <ul className="space-y-2 text-gray-600">
-                <li className="flex items-start">
-                  <span className="text-blue-600 mr-2">•</span>
-                  Browse available rides or post a request
-                </li>
-                <li className="flex items-start">
-                  <span className="text-blue-600 mr-2">•</span>
-                  Contact drivers directly to arrange details
-                </li>
-                <li className="flex items-start">
-                  <span className="text-blue-600 mr-2">•</span>
-                  Enjoy safe and affordable transportation
-                </li>
-              </ul>
-            </div>
-            <div>
-              <h3 className="text-lg font-semibold text-gray-900 mb-3">For Drivers</h3>
-              <ul className="space-y-2 text-gray-600">
-                <li className="flex items-start">
-                  <span className="text-green-600 mr-2">•</span>
-                  Post your available rides with details
-                </li>
-                <li className="flex items-start">
-                  <span className="text-green-600 mr-2">•</span>
-                  View ride requests from passengers
-                </li>
-                <li className="flex items-start">
-                  <span className="text-green-600 mr-2">•</span>
-                  Help fellow students while earning money
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-
-        {/* Call to Action */}
-        <div className="text-center mt-12">
-          <h2 className="text-2xl font-bold text-gray-900 mb-4">Ready to Get Started?</h2>
-          <p className="text-gray-600 mb-6">
-            Join our community of students helping each other get around safely and affordably.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
-              to="/post-ride"
-              className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 transition-colors duration-200"
-            >
-              Post a Ride
-            </Link>
-            <Link
-              to="/request-ride"
-              className="inline-flex items-center px-6 py-3 border border-gray-300 text-base font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50 transition-colors duration-200"
-            >
-              Request a Ride
-            </Link>
-          </div>
-        </div>
       </div>
     </div>
   );

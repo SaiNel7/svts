@@ -13,12 +13,11 @@ export default function App() {
         <nav className="bg-white shadow p-4 flex justify-between">
           <Link to="/" className="text-xl font-semibold">SVTS RideShare</Link>
           <div className = "flex space-x-4">
-            <Link to="/" className="hover:underline">Home</Link>
             <Link to="/view-rides" className="hover:underline">View Rides</Link>
             <Link to="/post-ride" className="hover:underline">Post a Ride</Link>
             <Link to="/request-ride" className="hover:underline">Request a Ride</Link>
             <Link to="/view-requests" className="hover:underline">View Requests</Link>
-            <Link to="/Profile" className="hover:underline">Profile</Link>
+            {/* <Link to="/Profile" className="hover:underline">Profile</Link> */}
           </div>
         </nav>
 

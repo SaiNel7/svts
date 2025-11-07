@@ -63,8 +63,8 @@ function PostRide() {
 
   return (
     <div className="min-h-screen flex flex-col items-center bg-gray-50 pt-8">
-      <h1 className="text-2xl font-bold mb-2">Post a Ride</h1>
-      <p className="mb-6">This is where you can post a new ride.</p>
+      <h1 className="text-2xl font-bold mb-2">Post a Ride to Sri Vidya Temple</h1>
+      <p className="mb-6">Offer rides to fellow temple visitors going to Sri Vidya Temple Society in Rush, NY.</p>
       <div className="bg-white shadow-md rounded-lg p-8 w-full max-w-md">
         {message && (
           <div className={`mb-4 p-3 rounded ${message.includes('successfully') ? 'bg-green-100 text-green-700' : 'bg-red-100 text-red-700'}`}>
@@ -99,7 +99,7 @@ function PostRide() {
               />
             </label>
             <label className="flex flex-col text-sm font-medium">
-              Start Location (Zip / Postal Code):
+              Your Location (Zip / Postal Code):
               <input 
                 type="text" 
                 value={fromLocation} 
@@ -109,6 +109,11 @@ function PostRide() {
                 required
               />
             </label>
+            <div className="bg-blue-50 p-3 rounded border border-blue-200">
+              <p className="text-sm text-blue-800">
+                <strong>Destination:</strong> Sri Vidya Temple Society - Rush, NY
+              </p>
+            </div>
             <label className="flex flex-col text-sm font-medium">
               Leave Date:
               <input 

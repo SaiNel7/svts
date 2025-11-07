@@ -5,7 +5,7 @@ import { useNavigate } from 'react-router-dom';
 export default function RequestRide() {
   const [formData, setFormData] = useState({
     name: '',
-    to_location: '',
+    from_location: '',
     leave_date: '',
     contact: '',
     notes: ''
@@ -30,7 +30,7 @@ export default function RequestRide() {
 
     try {
       // Validate required fields
-      if (!formData.name || !formData.to_location || !formData.leave_date || !formData.contact) {
+      if (!formData.name || !formData.from_location || !formData.leave_date || !formData.contact) {
         throw new Error('Please fill in all required fields');
       }
 
@@ -47,7 +47,8 @@ export default function RequestRide() {
         .from('ride_requests')
         .insert([{
           name: formData.name,
-          to_location: formData.to_location,
+          from_location: formData.from_location,
+          to_location: 'Sri Vidya Temple Society - Rush, NY',
           leave_date: formData.leave_date,
           contact: formData.contact,
           notes: formData.notes || null,
@@ -61,7 +62,7 @@ export default function RequestRide() {
       setSuccess(true);
       setFormData({
         name: '',
-        to_location: '',
+        from_location: '',
         leave_date: '',
         contact: '',
         notes: ''
@@ -85,9 +86,9 @@ export default function RequestRide() {
       <div className="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="bg-white rounded-lg shadow-sm p-6">
           <div className="mb-6">
-            <h1 className="text-2xl font-bold text-gray-900">Request a Ride</h1>
+            <h1 className="text-2xl font-bold text-gray-900">Request a Ride to Sri Vidya Temple</h1>
             <p className="mt-2 text-gray-600">
-              Let drivers know you're looking for a ride to your destination.
+              Let drivers know you're looking for a ride to Sri Vidya Temple Society in Rush, NY.
             </p>
           </div>
 
@@ -121,19 +122,25 @@ export default function RequestRide() {
             </div>
 
             <div>
-              <label htmlFor="to_location" className="block text-sm font-medium text-gray-700 mb-1">
-                Destination (Zip Code) *
+              <label htmlFor="from_location" className="block text-sm font-medium text-gray-700 mb-1">
+                Your Location (Zip Code) *
               </label>
               <input
                 type="text"
-                id="to_location"
-                name="to_location"
-                value={formData.to_location}
+                id="from_location"
+                name="from_location"
+                value={formData.from_location}
                 onChange={handleChange}
                 required
                 className="w-full p-3 border border-gray-300 rounded-md focus:ring-blue-500 focus:border-blue-500"
-                placeholder="Enter destination zip code"
+                placeholder="Enter your zip code"
               />
+            </div>
+            
+            <div className="bg-blue-50 p-4 rounded-md border border-blue-200">
+              <p className="text-sm text-blue-800">
+                <strong>Destination:</strong> Sri Vidya Temple Society - Rush, NY
+              </p>
             </div>
 
             <div>
